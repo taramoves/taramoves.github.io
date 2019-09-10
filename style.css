@@ -1,0 +1,146 @@
+body{
+    background-size: cover;
+    background-color: black;
+}
+
+.wrapper{
+    /* margin: auto;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dancers{
+    position: absolute;
+    height: 500px;
+    width: 1000px;
+    animation: kenburns 40s linear 0s infinite alternate;
+}
+
+/* pan in and out from dancers */
+@keyframes kenburns {
+    0% {
+        transform: scale(3) translateX(-1000px) translateY(100px);
+        opacity: 1;
+    }
+    100% {
+        transform:  scale(3) translateX(500px) translateY(100px);
+        /* scale3d(2, 2, 0) translate3d(0px, 0px, 0px); */
+        opacity: 1;
+    }
+}
+
+#dancers img{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: colorchange 30s steps(3,end) 0s infinite alternate;
+}
+
+@keyframes colorchange {
+    0% {
+        filter: hue-rotate(0);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.position{
+    position: absolute;
+}
+
+#briana{
+    left: 250px;
+    filter: hue-rotate(200deg)
+}
+
+#yaz{
+    left: -200px;
+    filter: hue-rotate(100deg)
+}
+
+#mereba{
+    left: 700px;
+    filter: hue-rotate(90deg)
+}
+
+#ames{
+    left:-50px;
+    filter: hue-rotate(300deg)
+}
+
+#briana{
+    left: 250px;
+}
+
+#aliyah{
+    left: 1300px;
+}
+
+#lorenzo{
+    left: 400px;
+    filter: hue-rotate(120deg)
+}
+
+#paul{
+    left: 1150px;
+    filter: hue-rotate(200deg)
+}
+
+#maria{
+    left: 550px;
+}
+
+#sara{
+    left:100px;
+}
+
+#tink{
+    left:1000px;
+    filter: hue-rotate(120deg)
+
+}
+
+#toro{
+    left:850px;
+    filter: hue-rotate(270deg)
+
+}
+
+.text {
+    position: absolute;
+    font-size: 6em;
+    top: 0px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    /* Color fallback */
+    color: blue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url("fire.gif");
+    /* animation: textsituation 1s infinite alternate; */
+
+}
+
+@keyframes textsituation{
+    0% {
+        background-image: linear-gradient(to right, hsl(0, 100%, 50%) , hsl(300, 100%, 50%));
+    }
+    50% {
+        background-image: linear-gradient(to right, hsl(300, 100%, 50%) , hsl(200, 100%, 50%));
+    }
+    100% {
+        background-image: linear-gradient(to right, hsl(200, 100%, 50%), hsl(100, 100%, 50%));
+    }
+}
